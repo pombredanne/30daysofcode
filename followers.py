@@ -13,8 +13,9 @@ def get_all_followers(service, username):
     return followers
 
 if __name__  == '__main__':
-    if len(sys.argv) != 4:
-        print "Usage: %s <your_username> <password> <other_username>"%sys.argv[0]
+    if len(sys.argv) != 3:
+        print "Usage: %s <your_username> <other_username>"%sys.argv[0]
         sys.exit(-1)
-    gh = github.GitHub(sys.argv[1], sys.argv[2])
+    password = raw_input
+    gh = github.GitHub(sys.argv[1], password)
     print len(get_all_followers(gh, sys.argv[3]))
