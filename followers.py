@@ -10,6 +10,7 @@ def get_all_followers(service, username):
         followers.extend(current_page)
         empty = len(current_page)==0
         page += 1
+    return followers
 
 if __name__  == '__main__':
     if len(sys.argv) != 4:
